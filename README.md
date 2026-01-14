@@ -53,12 +53,19 @@ The goal is simple: **show up every day, learn something concrete, and commit pr
 * How to use `round()`
 * How to format output using **f-strings**
 
-### Key Concepts
+📅 Day 3 – Control Flow & Logic
 
-* Python is **strongly typed** but **dynamically typed**
-* Readability matters (underscores, f-strings)
-* Knowing operator precedence prevents logic bugs
+What I learned
 
+= assigns a value, == compares values and returns a boolean
+
+How if, elif, and else control program flow
+
+The modulo operator % to check remainders (e.g. even/odd logic)
+
+Nested if statements and when they become a readability problem
+
+Using logical operators and / or to combine conditions
 ---
 
 ## 🔥 Challenge Rules
