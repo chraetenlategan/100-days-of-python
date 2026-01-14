@@ -22,8 +22,6 @@ for i in range(pass_len+1):
     elif random_temp ==3 and nr_symbols !=0:
         password += random.choice(symbols)
         nr_symbols -= 1
-
-
 print(f"Your password is {password}")
 
 
