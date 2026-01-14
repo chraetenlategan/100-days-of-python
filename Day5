@@ -11,7 +11,7 @@ import random
 password = ""
 pass_len = nr_letters + nr_numbers + nr_symbols
 
-for i in range(pass_len):
+for i in range(pass_len+1):
     random_temp = random.randint(1,3)
     if random_temp == 1 and nr_letters != 0:
         password += random.choice(letters)
