@@ -1,0 +1,44 @@
+# Hangman game
+import random
+# make a list with all possible words
+words = ["Test","Test"]
+
+# Start an interduction to the user
+print("Hello welcome to Chraeten's Hangman game")
+
+#Choose a random word
+random_word = random.choice(words)
+
+#Create an unknown string for the user
+
+lives = 3
+tempbuild = ""
+unknown_string = ''
+for y in range(len(random_word)):
+    tempbuild += "_"
+unknown_string = tempbuild
+while lives !=0 and tempbuild != random_word:
+    bfound = False
+    #Display the unknown string to the user
+    print(f"Your random word is \n {tempbuild}")
+
+    #ask the user for input
+    letter = input("Please choose a letter \n")
+
+    #Check wheter the letter is correct
+    for i in range(len(random_word)):
+        if random_word[i] == letter:
+            bfound = True
+            #rebuild the unknown string
+            for x in range(len(random_word)):
+                if x == i:
+                    tempbuild += letter
+                elif unknown_string[x] != "_":
+                    tempbuild += unknown_string[x]
+                else:
+                    tempbuild += "_"
+            print(f"Congrationlations you got the letter correct \n {tempbuild}")
+            unknown_string = tempbuild
+    if bfound == False:
+        lives -= 1
+        print(f"Incorrect Letter You have {lives} lives left")
