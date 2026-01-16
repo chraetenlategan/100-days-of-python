@@ -1,44 +1,26 @@
-# Hangman game
 import random
-# make a list with all possible words
-words = ["Test","Test"]
+# Chraeten Hang Man game
+print("Welcome to Chraeten's game of Hangman")
 
-# Start an interduction to the user
-print("Hello welcome to Chraeten's Hangman game")
-
-#Choose a random word
+words = ["cat", "cat"]
 random_word = random.choice(words)
-
-#Create an unknown string for the user
+censored = len(random_word)*"_"
+print(f"Your random word is \n {censored}")
 
 lives = 3
-tempbuild = ""
-unknown_string = ''
-for y in range(len(random_word)):
-    tempbuild += "_"
-unknown_string = tempbuild
-while lives !=0 and tempbuild != random_word:
+while random_word != censored and lives != 0:
     bfound = False
-    #Display the unknown string to the user
-    print(f"Your random word is \n {tempbuild}")
-
-    #ask the user for input
-    letter = input("Please choose a letter \n")
-
-    #Check wheter the letter is correct
+    user_input = input(f"Pick a letter \n")
     for i in range(len(random_word)):
-        if random_word[i] == letter:
+        if user_input == random_word[i]:
             bfound = True
-            #rebuild the unknown string
-            for x in range(len(random_word)):
-                if x == i:
-                    tempbuild += letter
-                elif unknown_string[x] != "_":
-                    tempbuild += unknown_string[x]
-                else:
-                    tempbuild += "_"
-            print(f"Congrationlations you got the letter correct \n {tempbuild}")
-            unknown_string = tempbuild
+            censored = censored[:i] + user_input + censored[i+1:]
+            print(f" correct !!! \n {censored}")
     if bfound == False:
         lives -= 1
-        print(f"Incorrect Letter You have {lives} lives left")
+        print(f"Incorrect Letter you have {lives} lives left")
+
+if censored == random_word:
+    print(f"Congrationlations you have won the game with {lives} lives left")
+else:
+    print(f"Unlucky you ran out of lives, the word was {random_word}")
