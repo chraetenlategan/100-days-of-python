@@ -1,0 +1,17 @@
+print("Welcome to my silent auction game")
+next_person = "yes"
+auctions = {}
+highest = 0
+temp = 0
+while next_person == "yes":
+    name = input("What is your name \n")
+    amount = int(input("What is the amount\n"))
+    next_person = input("Is there another person").lower()
+    auctions[name] = amount
+else:
+    for i in auctions:
+        if auctions[i] > highest:
+            highest = auctions[i]
+            temp = i
+
+print(f"The winner is {auctions[temp-1]} with {highest}")
