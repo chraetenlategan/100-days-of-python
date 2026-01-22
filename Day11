@@ -27,6 +27,8 @@ while True:
         print("See you next time")
         exit()
     elif play == "y":
+        player_cards.clear()
+        dealer_cards.clear()
         print(logo)
         for i in range(2):
             player_cards.append(random.choice(card_deck))
