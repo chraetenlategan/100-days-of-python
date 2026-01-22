@@ -1,0 +1,74 @@
+import random
+print("Welcome to my game of Blackjack")
+logo = r"""
+.------.            _     _            _    _            _    
+|A_  _ |.          | |   | |          | |  (_)          | |   
+|( \/ ).-----.     | |__ | | __ _  ___| | ___  __ _  ___| | __
+| \  /|K /\  |     | '_ \| |/ _` |/ __| |/ / |/ _` |/ __| |/ /
+|  \/ | /  \ |     | |_) | | (_| | (__|   <| | (_| | (__|   < 
+`-----| \  / |     |_.__/|_|\__,_|\___|_|\_\ |\__,_|\___|_|\_\\
+      |  \/ K|                            _/ |                
+      `------'                           |__/           
+"""
+player_cards = []
+dealer_cards = []
+card_deck = [11,2,3,4,5,6,7,8,9,10,10,10,10]
+pick_up_continue = True
+
+#functions
+
+def show_all_cards(player_cards,dealer_cards):
+    print(f"Your cards: {player_cards}")
+    print(f"The dealer's cards: {dealer_cards}")
+
+while True:
+    play = input("Would you like to play a game of blackjack y/n")
+    if play == "n":
+        print("See you next time")
+        exit()
+    elif play == "y":
+        print(logo)
+        for i in range(2):
+            player_cards.append(random.choice(card_deck))
+            dealer_cards.append(random.choice(card_deck))
+        if sum(player_cards) == 21 and sum(dealer_cards)==21:
+            print("It is a draw, both have 21")
+            show_all_cards(player_cards,dealer_cards)
+        if sum(dealer_cards) == 21:
+            print("The dealer won the game with 21")
+            show_all_cards(player_cards,dealer_cards)
+        if sum(player_cards) == 21:
+            print("Congrationlations, you have won the game with 21!")
+            show_all_cards(player_cards,dealer_cards)
+
+        while sum(player_cards) < 17:
+            print(f"your cards are {player_cards}")
+            print(f"The dealer's first card is {dealer_cards[0]}")
+            pick_up = input("You have less than 17, press p to pick up   ").lower()
+            if pick_up == "p":
+                player_cards.append(random.choice(card_deck))
+            if sum(player_cards) > 21:
+                print("You are busted, the dealer has won")
+                show_all_cards(player_cards,dealer_cards)
+
+        while pick_up_continue == True:
+            print(f"You cards are {player_cards}")
+            print(f"The dealer's first card is {dealer_cards}")
+            pick_up_continue = input("would you like to pick up again").lower()
+            if pick_up_continue == "y":
+                player_cards.append(random.choice(card_deck))
+                if sum(player_cards) > 21:
+                    print("You are busted, the dealer has won")
+                    show_all_cards(player_cards,dealer_cards)
+            elif pick_up_continue == "n":
+                pick_up_continue = False
+        
+        if sum(player_cards) > sum(dealer_cards):
+            print("Congrationlations You have won")
+            show_all_cards(player_cards,dealer_cards)
+        elif sum(deal_cards) > sum(players_cards):
+            print("The dealer has won")
+            show_all_cards(player_cards,dealer_cards)
+        else:
+            print("Both scores are equal")
+            show_all_cards(player_cards,dealer_cards)
