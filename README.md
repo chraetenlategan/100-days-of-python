@@ -1,101 +1,58 @@
-# 🐍 100 Days of Python – Learning Journey
+100 Days of Python 🐍
 
-This repository documents my **100-day Python challenge**.
+This repository documents my progress through the 100 Days of Python challenge.
+Each day includes a small project focused on learning a specific Python concept.
 
-The goal is simple: **show up every day, learn something concrete, and commit progress publicly**. No fluff. Just fundamentals → mastery.
+📅 Daily Projects
 
----
+Day 1 – Band Name Generator (Variables)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day01
 
-## 📅 Day 1 – Python Basics
+Day 2 – Tip Calculator (Basic Python)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day02
 
-### What I learned
+Day 3 – Treasure Hunting Game (If Statements)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day03
 
-* How to use `print()` to display output
-* That quotation marks `""` indicate a **string**
-* How to use `\n` to start a new line
-* How `input()` works to receive user input
-* How to swap two variables using a **temporary variable**
+Day 4 – Rock Paper Scissors (Conditions)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day04
 
-### Key Concepts
+Day 5 – Password Generator (Random Module)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day05
 
-* Python reads code **top to bottom**
-* Strings are immutable text values
-* User input is always received as a **string** by default
+Day 6 – Loops Practice (Reeborg’s World)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day06
 
----
+Day 7 – Hangman Game
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day07
 
-## 📅 Day 2 – Data Types & Operations
+Day 8 – Caesar Cipher (Functions)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day08
 
-### What I learned
+Day 9 – Silent Auction Program (Dictionaries)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day09
 
-* Different **data types** (`int`, `float`, `str`, etc.)
-* Computers start counting from zero → index `[0]` is the **first** item
-* Negative indexing counts from the back
+Day 10 – Calculator (Functions)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day10
 
-  ```python
-  print("Hello"[-1])  # outputs 'o'
-  ```
-* You can use `_` (underscore) in large numbers for readability
+Day 11 – Blackjack Game
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day11
 
-  ```python
-  1_000_000 == 1000000
-  ```
-* The `type()` function shows a variable’s data type
-* Any division (`/`) returns a **float**
-* Floor division (`//`) returns an **integer**
-* Exponents use `**`
-* Order of operations:
+Day 12 – Number Guessing Game
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day12
 
-  1. Parentheses `()`
-  2. Exponents `**`
-  3. Multiplication `*` and Division `/`
-  4. Addition `+` and Subtraction `-`
-* How to use `round()`
-* How to format output using **f-strings**
+Day 14 – Higher or Lower Game
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day14
 
-📅 Day 3 – Control Flow & Logic
+Day 15 – Coffee Machine Simulator (Procedural Programming)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day15
 
-What I learned
+Day 16 – Coffee Machine (Object-Oriented Programming)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day16
 
-= assigns a value, == compares values and returns a boolean
+Day 17 – Quiz Application (OOP + Dataset)
+👉 https://github.com/chraetenlategan/100-days-of-python/blob/main/Day17
 
-How if, elif, and else control program flow
+🎯 Goal
 
-The modulo operator % to check remainders (e.g. even/odd logic)
-
-Nested if statements and when they become a readability problem
-
-Using logical operators and / or to combine conditions
----
-
-## 🔥 Challenge Rules
-
-* Code **every day**
-* Commit progress daily
-* Focus on understanding, not speed
-* No skipping fundamentals
-
----
-
-## 🚀 Progress Tracker
-
-* [x] Day 1 – Basics
-* [x] Day 2 – Data Types & Operations
-* [ ] Day 3
-* [ ] Day 4
-* [ ] Day 5
-* …
-
----
-
-## 🎯 End Goal
-
-By Day 100, I aim to:
-
-* Be fully comfortable with Python fundamentals
-* Write clean, readable, and efficient code
-* Have a public proof-of-work trail on GitHub
-
----
-
-> Discipline beats motivation. One commit per day.
+Build strong Python fundamentals through daily practice and small projects, progressing from basic syntax to object-oriented programming.
