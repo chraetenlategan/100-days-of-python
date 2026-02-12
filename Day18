@@ -4,6 +4,7 @@ screen = Screen()
 tim = Turtle()
 tim.position()
 tim.speed(0)
+tim.hideturtle()
 screen.colormode(255)
 # This gives us access to the bottom left where we want to start
 x = -(screen.window_width()/2) + 100
