@@ -1,0 +1,33 @@
+from turtle import Turtle, Screen
+import random
+screen = Screen()
+tim = Turtle()
+tim.position()
+tim.speed(0)
+screen.colormode(255)
+# This gives us access to the bottom left where we want to start
+x = -(screen.window_width()/2) + 100
+y = -(screen.window_height()/2) + 100
+tim.penup()
+tim.goto(x,y)
+tim.pendown()
+for i in range(10):
+    for _ in range(10):
+        tim.penup()
+        r = random.randint(0,255)
+        g = random.randint(0,255)
+        b = random.randint(0,255)
+        tim.color(r,g,b)
+        tim.forward(50)
+        tim.pendown()
+        tim.begin_fill()
+        tim.circle(20)
+        tim.end_fill()
+        
+    y += 50
+    tim.penup()
+    tim.goto(x,y)
+    tim.pendown()
+    
+
+screen.exitonclick()
