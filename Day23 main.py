@@ -1,6 +1,7 @@
 from turtle import Turtle,Screen
 from car import Car
-import random
+from timmy import Timmy
+import random,time
 
 #Screen Setup
 screen = Screen()
@@ -10,26 +11,26 @@ screen.tracer(0)
 
 #Create 8 cars
 cars = [Car() for _ in range(8)]
-# The possible fix position for cars
-car_positions = [
-    (-500, -400), 
-    (-500, -300), 
-    (-500, -200), 
-    (-500, -100), 
-    (-500, 0), 
-    (-500, 100), 
-    (-500, 200), 
-    (-500, 300), 
-    (-500, 400)
-]
+
+for i in range(len(cars)):
+    cars[i].spawn(screen, i, len(cars))
+
+tim = Timmy()
+
+screen.listen()
+screen.onkey(tim.move_up,"w")
+screen.onkey(tim.move_down,"s")
+screen.onkey(tim.move_left,"a")
+screen.onkey(tim.move_right,"d")
+
+game_is_on = True
+
+while game_is_on:
+    screen.update()
+    time.sleep(0.1)
+    for car in cars:
+        car.forward(5)
 
 
-for i in range (len(cars)):
-    car.goto(car_positions[i-1])
 
-
-
-
-
-screen.update()
 screen.exitonclick()
