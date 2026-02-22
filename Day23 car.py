@@ -20,8 +20,8 @@ class Car(Turtle):
         left_edge = -(screen.window_width() / 2) + margin
         right_edge = (screen.window_width() / 2) - margin
 
-   
-        new_y = starting_y + (index * spacing)
+        jitter = random.randint(-15, 15) 
+        new_y = starting_y + (index * spacing) + jitter
         random_x = random.choice([left_edge, right_edge])
         
         
@@ -33,5 +33,17 @@ class Car(Turtle):
             starting_x = left_edge - random.randint(50, 600)
 
         self.goto(x=starting_x, y=new_y)
+    
+    def return_position(self):
+        if self.xcor() > 700:
+            current_y = self.ycor()
+            self.goto(-550,current_y)
+        
+        elif self.xcor() < -700:
+            current_y = self.ycor()
+            self.goto(550,current_y)
+        
+        else:
+            pass
 
         
