@@ -23,11 +23,15 @@ class Car(Turtle):
    
         new_y = starting_y + (index * spacing)
         random_x = random.choice([left_edge, right_edge])
-        self.goto(x=random_x, y=new_y)
+        
         
         if random_x == right_edge:
             self.setheading(180)
+            starting_x = right_edge + random.randint(50, 600) 
         else:
             self.setheading(0)
+            starting_x = left_edge - random.randint(50, 600)
+
+        self.goto(x=starting_x, y=new_y)
 
         
