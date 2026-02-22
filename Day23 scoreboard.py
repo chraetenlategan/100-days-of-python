@@ -15,3 +15,8 @@ class Scoreboard(Turtle):
         self.clear()
         self.goto(0,350)
         self.write("Level", align = "center",font=("Arial",25,"normal"))
+
+    def collision(self):
+        self.clear()
+        self.goto(0,0)
+        self.write("You have collided", align = "center",font=("Arial",50,"normal"))
