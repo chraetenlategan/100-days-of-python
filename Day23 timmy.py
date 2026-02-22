@@ -6,6 +6,7 @@ class Timmy(Turtle):
         self.shape("turtle")
         self.color("green")
         self.penup()
+        self.reset_position(self)
     
     def move_up(self):
         self.setheading(90)
@@ -22,3 +23,7 @@ class Timmy(Turtle):
     def move_right(self):
         self.setheading(0)
         self.forward(10)
+    
+    def reset_position(self,screen):
+        self.setheading(90)
+        self.goto(0,-380)
